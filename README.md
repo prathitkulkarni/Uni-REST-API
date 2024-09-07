@@ -60,7 +60,8 @@ This project is a REST API built with Spring Boot that demonstrates many-to-many
 ## Example JSON Data
 
 ### Add or Update Student
-```json for Professor
+For Professor
+```json 
 {
         "name": "FirstName LastName",
         "courses": [
@@ -72,8 +73,9 @@ This project is a REST API built with Spring Boot that demonstrates many-to-many
             }
         ]
 }
-
-```json for Course
+```
+For Course
+```json 
 {
     "name": "Data Science for Big Data Analytics"
 }
