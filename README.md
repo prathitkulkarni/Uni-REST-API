@@ -26,26 +26,56 @@ This project is a REST API built with Spring Boot that demonstrates many-to-many
 
 ### Setup Instructions
 
-1. Clone the repository:
+1. **Clone the repository**
    ```bash
    git clone https://github.com/prathitkulkarni/Uni-REST-API.git
+   ```
+2. **Navigate to the Project Directory**
+    ```bash
+    cd your-repository-name
+    ```
+3. **Configure MySQL Database**
+    - Create a new database in MySQL.
+    - Update the `application.properties` file in `src/main/resources` with your database details:
+      ```properties
+      spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
+      spring.datasource.username=your_database_username
+      spring.datasource.password=your_database_password
+      spring.jpa.hibernate.ddl-auto=update
+      ```
+4. **Build the Project**
+    ```bash
+    mvn clean install
+    ```
+5. **Run the Application**
+    ```bash
+    mvn spring-boot:run
+    ```
+6. **Access the API**
+    - **Retrieve all entities**: `GET /api/entities`
+    - **Create a new entity**: `POST /api/entities`
+    - **Update an entity by ID**: `PUT /api/entities/{id}`
+    - **Delete an entity by ID**: `DELETE /api/entities/{id}`
+  
+## Example JSON Data
 
-2. Set Up the MySQL Database
-Create a database in MySQL (e.g., springboot_db).
-Update the database configuration in src/main/resources/application.properties:
+### Add or Update Student
+```json for Professor
+{
+        "name": "FirstName LastName",
+        "courses": [
+            {
+                "courseid": 4
+            },
+            {
+                "courseid": 7
+            }
+        ]
+}
 
-spring.datasource.url=jdbc:mysql://localhost:3306/springboot_db
-spring.datasource.username=root
-spring.datasource.password=yourpassword
-spring.jpa.hibernate.ddl-auto=update
-
-3. Build the Project Using Maven
-mvn clean install
-
-4. Run the Application
-mvn spring-boot:run
-
-5. Access the API
-The REST API will be running at http://localhost:8080.
+```json for Course
+{
+    "name": "Data Science for Big Data Analytics"
+}
 
 
