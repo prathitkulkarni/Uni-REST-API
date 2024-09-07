@@ -59,7 +59,6 @@ This project is a REST API built with Spring Boot that demonstrates many-to-many
   
 ## Example JSON Data
 
-### Add or Update Student
 For Professor
 ```json 
 {
