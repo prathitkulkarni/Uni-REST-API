@@ -28,4 +28,4 @@ This project is a REST API built with Spring Boot that demonstrates many-to-many
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repository-name.git
+   git clone https://github.com/prathitkulkarni/Uni-REST-API.git
